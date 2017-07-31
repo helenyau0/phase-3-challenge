@@ -40,10 +40,23 @@ app.get('/api/days/:day', (req, res) => {
 })
 
 app.post('/api/array/concat', (req, res) => {
+  const { array1, array2 } = req.body
 
+  if(Array.isArray(array1) && Array.isArray(array2)) {
+    const newArray = array1.concat(array2)
+    res.json({ "result": newArray })
+  } else {
+    res.format({
+      'application/json': () => {
+        res.status(400).json({
+          "error": "Input data should be of type Array."
+        })
+      }
+    })
+  }
 })
 
-module.exports = app;
+module.exports = app
 
 app.listen(port)
-console.log('listening on port: 3000');
+console.log('listening on port: 3000')
