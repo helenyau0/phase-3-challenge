@@ -40,7 +40,9 @@ app.post('/api/array/concat', (req, res) => {
 
   if(Array.isArray(array1) && Array.isArray(array2)) {
     const newArray = array1.concat(array2)
-    res.json({ "result": newArray })
+    res.json({
+      "result": newArray
+    })
   } else {
     res.format({
       'application/json': () => {
