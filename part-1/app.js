@@ -23,17 +23,13 @@ app.get('/api/days/:day', (req, res) => {
   if(daysOfWeek.hasOwnProperty(`${day}`)) {
     res.format({
       'application/text': () => {
-        res.json({
-          response: daysOfWeek[`${day}`]
-        })
+        res.json(daysOfWeek[`${day}`])
       }
     })
   } else {
     res.format({
       'application/text': () => {
-        res.status(400).json({
-          response: `'${day}' is not a valid day!`
-        })
+        res.status(400).json(`'${day}' is not a valid day!`)
       }
     })
   }
