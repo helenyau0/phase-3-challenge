@@ -4,7 +4,7 @@ const groceryStore = () => {
   const command = process.argv[2]
   const input = process.argv[3]
 
-  if(command === 'product_list') {
+  if(command === 'product-list') {
     listBySection(input)
   } else if(command === 'shopper-orders') {
     allOrdersOfShopper(input)

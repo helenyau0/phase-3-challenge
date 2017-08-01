@@ -10,7 +10,7 @@ const listBySection = (category) => {
     } else {
       console.log('|--------------+---------+\n| Product Name | Section |\n|--------------+---------+')
       for(values of result.rows) {
-        console.log("|" , values.product_name, "       |" , values.section, "   |");
+        console.log("|" , values.product_name, "      |" , values.section, "   |");
       }
       console.log('|--------------+---------+');
       process.exit(0)
@@ -20,7 +20,7 @@ const listBySection = (category) => {
 }
 
 const allOrdersOfShopper = (id) => {
-  return client.query(`SELECT orders.id, total_cost FROM orders JOIN shoppers ON shoppers.id = orders.total_id WHERE orders.total_id=$1;`, [id], (err, result) => {
+  return client.query('SELECT orders.id, total_cost FROM orders JOIN shoppers ON shoppers.id = orders.total_id WHERE orders.total_id=$1', [id], (err, result) => {
     if (err) {
       console.log(err.stack)
     } else {
@@ -35,7 +35,7 @@ const allOrdersOfShopper = (id) => {
   })
 }
 const allShoppers = () => {
-  return client.query(`SELECT customer, number_of_orders FROM shoppers;`, (err, result) => {
+  return client.query('SELECT customer, number_of_orders FROM shoppers', (err, result) => {
     if (err) {
       console.log(err.stack)
     } else {
