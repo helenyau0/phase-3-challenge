@@ -8,9 +8,10 @@ INSERT INTO shoppers (customer, number_of_orders) VALUES('Helen', 1);
 INSERT INTO shoppers (customer, number_of_orders) VALUES('Coleby', 1);
 
 INSERT INTO orders (total_cost, total_id) VALUES(6.17, 1);
+INSERT INTO orders (total_cost, total_id) VALUES(6.36, 3);
 INSERT INTO orders (total_cost, total_id) VALUES(9.30, 2);
-INSERT INTO orders (total_cost, total_id) VALUES(26.78, 3);
-INSERT INTO orders (total_cost, total_id) VALUES(10.00, 3);
-INSERT INTO orders (total_cost, total_id) VALUES(6.52, 3);
+INSERT INTO orders (total_cost, total_id) VALUES(26.78, 1);
+INSERT INTO orders (total_cost, total_id) VALUES(2.52, 3);
+INSERT INTO orders (total_cost, total_id) VALUES(1.11, 1);
 INSERT INTO orders (total_cost, total_id) VALUES(8.87, 4);
 INSERT INTO orders (total_cost, total_id) VALUES(2.94, 5);
