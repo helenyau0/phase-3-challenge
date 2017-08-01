@@ -2,13 +2,13 @@ DROP TABLE IF EXISTS shoppers;
 
 CREATE TABLE shoppers (
   id SERIAL PRIMARY KEY,
-  shopper VARCHAR(250),
+  customer VARCHAR(250),
   number_of_orders INTEGER
 );
 
 DROP TABLE IF EXISTS grocery_items;
 
-CREATE TABLE grocery_items (
+CREATE TABLE items (
   id SERIAL PRIMARY KEY,
   product_name VARCHAR(250),
   price DECIMAL,
