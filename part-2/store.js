@@ -1,4 +1,4 @@
-const { listBySection, allOrdersOfShopper } = require('./database/database')
+const { listBySection, allOrdersOfShopper, allShoppers } = require('./database/database')
 
 const groceryStore = () => {
   const command = process.argv[2]
@@ -8,6 +8,8 @@ const groceryStore = () => {
     listBySection(input)
   } else if(command === 'shopper-orders') {
     allOrdersOfShopper(input)
+  } else if(command === 'real-shoppers') {
+    allShoppers()
   }
 }
 

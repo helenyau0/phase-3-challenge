@@ -10,7 +10,7 @@ const listBySection = (category) => {
     } else {
       console.log('|--------------+---------+\n| Product Name | Section |\n|--------------+---------+')
       for(values of result.rows) {
-        console.log("|" , values.product_name, "|" , values.section, "|");
+        console.log("|" , values.product_name, "       |" , values.section, "   |");
       }
       console.log('|--------------+---------+');
       process.exit(0)
@@ -34,8 +34,24 @@ const allOrdersOfShopper = (id) => {
     client.end()
   })
 }
+const allShoppers = () => {
+  return client.query(`SELECT customer, number_of_orders FROM shoppers;`, (err, result) => {
+    if (err) {
+      console.log(err.stack)
+    } else {
+      console.log('|--------------+------------------|\n| shopper name | number of orders |\n|--------------+------------------|');
+      for(values of result.rows) {
+        console.log("| ", values.customer, "      |   ", values.number_of_orders, "           |");
+      }
+      console.log('|--------------+------------------|');
+      process.exit(0)
+    }
+    client.end()
+  })
+}
 
 module.exports = {
   listBySection,
-  allOrdersOfShopper
+  allOrdersOfShopper,
+  allShoppers
 }

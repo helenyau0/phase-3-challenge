@@ -1,8 +1,8 @@
 COPY items(product_name,price,section)
 FROM '/Users/helen/Desktop/Phase 2/phase-3-challenge/part-2/database/grocery_items.cvs' DELIMITER ',' CSV HEADER;
 
-INSERT INTO shoppers (customer, number_of_orders) VALUES('Shanti', 1);
-INSERT INTO shoppers (customer, number_of_orders) VALUES('Mary', 2);
+INSERT INTO shoppers (customer, number_of_orders) VALUES('Shanti', 3);
+INSERT INTO shoppers (customer, number_of_orders) VALUES('Mary', 1);
 INSERT INTO shoppers (customer, number_of_orders) VALUES('Justin', 2);
 INSERT INTO shoppers (customer, number_of_orders) VALUES('Helen', 1);
 INSERT INTO shoppers (customer, number_of_orders) VALUES('Coleby', 1);
