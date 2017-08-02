@@ -17,7 +17,8 @@ const clearCart = () => {
 
 const totalCost = (price) => {
   total += parseFloat(price)
-  document.querySelector('.total').innerHTML = `Total $${total}`
+  let totalAmount = total.toFixed(2)
+  document.querySelector('.total').innerHTML = `Total $${totalAmount}`
 }
 
 const addToCart = (event) => {
