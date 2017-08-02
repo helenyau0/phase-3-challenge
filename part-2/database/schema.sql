@@ -6,7 +6,7 @@ CREATE TABLE shoppers (
   number_of_orders INTEGER
 );
 
-DROP TABLE IF EXISTS grocery_items;
+DROP TABLE IF EXISTS items;
 
 CREATE TABLE items (
   id SERIAL PRIMARY KEY,
@@ -24,5 +24,4 @@ CREATE TABLE orders (
   total_cost DECIMAL,
   total_id INTEGER,
   FOREIGN KEY(total_id) REFERENCES shoppers(id)
-
 );
