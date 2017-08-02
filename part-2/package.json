@@ -1,0 +1,21 @@
+{
+  "name": "part-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "store.js",
+  "scripts": {
+    "db:create": "createdb grocery_store",
+    "db:drop": "dropdb grocery_store",
+    "db:schema": "psql grocery_store < ./database/schema.sql",
+    "db:seed": "psql grocery_store < ./database/load-data.sql",
+    "db:reset": "npm run db:drop && npm run db:create && npm run db:schema && npm run db:seed",
+    "test": "mocha --recursive ./database/"
+  },
+  "author": "Helen Yau",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.5.0",
+    "pg": "^7.0.2"
+  }
+}
