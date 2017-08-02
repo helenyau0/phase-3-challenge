@@ -1,7 +1,7 @@
 {
   "name": "part-2",
   "version": "1.0.0",
-  "description": "",
+  "description": "Part 2: Command Line Grocery Store",
   "main": "store.js",
   "scripts": {
     "db:create": "createdb grocery_store",
