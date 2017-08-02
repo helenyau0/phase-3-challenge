@@ -10,9 +10,8 @@ const clearCart = () => {
   counter = 0
   total = 0
   document.querySelector('.itemsInCart').innerHTML = ""
-  document.getElementById("cart-item-count").innerHTML =  `(${counter})`
+  document.getElementById("cart-item-count").innerHTML = `(${counter})`
   document.querySelector('.total').innerHTML = `Total $${total}`
-
 }
 
 const totalCost = (price) => {
@@ -32,9 +31,12 @@ const addToCart = (event) => {
   price.appendChild(document.createTextNode(items[1]))
   li.appendChild(product)
   li.appendChild(price)
+
   document.querySelector('.itemsInCart').appendChild(li)
+
   counter++
-  document.getElementById("cart-item-count").innerHTML =  `(${counter})`
+
+  document.getElementById("cart-item-count").innerHTML = `(${counter})`
 
   let priceOfItem = items[1].replace('$', '')
 
