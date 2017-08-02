@@ -14,7 +14,7 @@
     `"node ./store product-list ____"`
     
    - to find all real shoppers in grocery_store run the command:
-
+    
     `"node ./store real-shoppers"`
 
   - to find all orders of a shopper with their id run the command below with their id.
