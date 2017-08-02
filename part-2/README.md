@@ -12,14 +12,15 @@
   - to find all grocery products of a given section, run the command below with a section from: dairy, meat, miscellaneous, produce, bread, packaged, deli, bulk, or frozen.
 
     `"node ./store product-list ____"`
+    
+   - to find all real shoppers in grocery_store run the command:
+
+    `"node ./store real-shoppers"`
 
   - to find all orders of a shopper with their id run the command below with their id.
 
     `"node ./store shopper-orders __"`
 
-  - to find all real shoppers in grocery_store run the command:
-
-    `"node ./store real-shoppers"`
 
 ## To test database query functions:
 
