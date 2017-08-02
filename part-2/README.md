@@ -13,7 +13,7 @@
 
     `"node ./store product-list ____"`
     
-   - to find all real shoppers in grocery_store run the command:
+  - to find all real shoppers in grocery_store run the command:
     
     `"node ./store real-shoppers"`
 
